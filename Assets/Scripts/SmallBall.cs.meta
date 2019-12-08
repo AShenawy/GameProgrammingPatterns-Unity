@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f31b8646c954a5f47b107b5e3a31444c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - ballSound: {instanceID: 0}
+  - particleEffect: {instanceID: 0}
+  - spawnLocation: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
