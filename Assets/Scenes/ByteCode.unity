@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 130866752}
   - component: {fileID: 130866751}
   - component: {fileID: 130866750}
+  - component: {fileID: 130866753}
   m_Layer: 5
   m_Name: Add
   m_TagString: Untagged
@@ -202,8 +203,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 622882447}
-        m_MethodName: PrintResult
+      - m_Target: {fileID: 130866753}
+        m_MethodName: DoMath
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -249,6 +250,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 130866748}
   m_CullTransparentMesh: 0
+--- !u!114 &130866753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130866748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57c13f67e80b8704e819d78f2c02a3f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  calculator: {fileID: 622882447}
 --- !u!1 &315074908
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,12 +436,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 580577451}
   - {fileID: 1942041512}
+  - {fileID: 580577451}
   - {fileID: 130866749}
-  - {fileID: 1165842259}
   - {fileID: 1567686536}
   - {fileID: 1829758855}
+  - {fileID: 1165842259}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -468,7 +482,7 @@ RectTransform:
   m_Children:
   - {fileID: 735934413}
   m_Father: {fileID: 483769070}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1049,7 +1063,7 @@ RectTransform:
   m_Children:
   - {fileID: 1487713837}
   m_Father: {fileID: 483769070}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1099,8 +1113,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 622882447}
-        m_MethodName: PrintResult
+      - m_Target: {fileID: 0}
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1299,7 +1313,7 @@ RectTransform:
   m_Children:
   - {fileID: 1569675573}
   m_Father: {fileID: 483769070}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1349,8 +1363,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 622882447}
-        m_MethodName: PrintResult
+      - m_Target: {fileID: 0}
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1505,7 +1519,7 @@ RectTransform:
   m_Children:
   - {fileID: 669687019}
   m_Father: {fileID: 483769070}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1555,8 +1569,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 622882447}
-        m_MethodName: PrintResult
+      - m_Target: {fileID: 0}
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1735,7 +1749,7 @@ GameObject:
   - component: {fileID: 1942041514}
   - component: {fileID: 1942041513}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Result Display
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1753,7 +1767,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 483769070}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

@@ -22,22 +22,22 @@ public class Calculator : MonoBehaviour
     {
         switch (calculation)
         {
-            case (CalculationType)0xA:
+            case CalculationType.addition:
                 addition.leftOperand = firstNumber.Evaluate();
                 addition.rightOperand = secondNumber.Evaluate();
                 return addition.Evaluate();
 
-            case (CalculationType)0xB:
+            case CalculationType.subtraction:
                 subtraction.leftOperand = firstNumber.Evaluate();
                 subtraction.rightOperand = secondNumber.Evaluate();
                 return subtraction.Evaluate();
 
-            case (CalculationType)0xC:
+            case CalculationType.multiplication:
                 multiplication.leftOperand = firstNumber.Evaluate();
                 multiplication.rightOperand = secondNumber.Evaluate();
                 return multiplication.Evaluate();
 
-            case (CalculationType)0xD:
+            case CalculationType.division:
                 division.leftOperand = firstNumber.Evaluate();
                 division.rightOperand = secondNumber.Evaluate();
                 return division.Evaluate();
