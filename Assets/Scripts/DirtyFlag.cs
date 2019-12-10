@@ -15,11 +15,6 @@ public class DirtyFlag : MonoBehaviour
         parentObjectTransform = GetComponent<Transform>();
     }
 
-    //private Transform getObjectTransform()
-    //{
-    //    return parentObjectTransform;
-    //}
-
     // Update is called once per frame
     void Update()
     {
@@ -35,7 +30,7 @@ public class DirtyFlag : MonoBehaviour
 
     private void clearTheFlag()
     {
-        childTransform = parentObjectTransform;
+        childTransform.transform.parent = parentObjectTransform;
         Debug.Log("Child position has been updated");
         isChanged = false;
     }
