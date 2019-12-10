@@ -1,10 +1,10 @@
 # GameDesignPatterns
 
 ## CodeMonkey Team Members
-AbdelSalam Megahed                              
-Ahmed ElShenawy
-Alper Üste
-Syeda Ghazal
+ - AbdelSalam Megahed
+ - Ahmed ElShenawy
+ - Alper Üste
+ - Syeda Ghazal
 
 ## Language & Game Engine Used 
 All patterns were implemented in C# on the Unity 2019.2 game engine.
