@@ -473,7 +473,7 @@ GameObject:
   - component: {fileID: 986823737}
   - component: {fileID: 986823740}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Spell Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -602,7 +602,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   virtualMachine: {fileID: 1283200329}
-  spellCodes: 690000000000000069000000ceffffff64000000
+  spellCodes: 69000000010000006900000019000000660000006900000001000000690000000000000068000000
 --- !u!1 &1283200328
 GameObject:
   m_ObjectHideFlags: 0

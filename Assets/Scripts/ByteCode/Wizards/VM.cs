@@ -40,14 +40,14 @@ public class VM : MonoBehaviour
                     int wPamount = PopOffStack();
                     int wPwizard = PopOffStack();
                     setWisdom(wPwizard, wPamount);
-                    print($"{player[wPwizard].name}'s health is affected by {wPamount}!");
+                    print($"{player[wPwizard].name}'s wisdom is affected by {wPamount}!");
                     break;
 
                 case Instructions.INST_SET_AGILITY:
                     int aPamount = PopOffStack();
                     int aPwizard = PopOffStack();
                     setAgility(aPwizard, aPamount);
-                    print($"{player[aPwizard].name}'s health is affected by {aPamount}!");
+                    print($"{player[aPwizard].name}'s agility is affected by {aPamount}!");
                     break;
 
                 case Instructions.INST_PLAY_SOUND:
@@ -60,7 +60,7 @@ public class VM : MonoBehaviour
                     int particleType = PopOffStack();
                     int targetWizard = PopOffStack();
                     spawnParticles(targetWizard, particleType);
-                    print($"{particleEffects[particleType]} spawned at {player[targetWizard]}!");
+                    print($"{particleEffects[particleType].name} spawned at {player[targetWizard].name}!");
                     break;
 
                 case Instructions.INST_LITERAL:
