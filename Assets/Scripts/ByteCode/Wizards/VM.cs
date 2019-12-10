@@ -5,39 +5,89 @@ using UnityEngine;
 public class VM : MonoBehaviour
 {
     public GameObject[] player;
-    //public int healthAmount;
+    //public int healthAmount = 100;
     //public int wisdomAmount;
     //public int agilityAmount;
     public AudioClip[] audioClips;
     public GameObject[] particleEffects;
 
     [Header("Instructions")]
-    public Instructions instructions;
+    public Instructions instruction;
+    private Stack valueStack = new Stack();
+    private int value;
 
     private void Start()
     {
 
     }
 
-    public void SortInstructions()
+    public void SortInstructions(int[] bytecode, int size)
     {
-        switch(instructions)
+        for (int i = 0; i < bytecode.Length; i++)
         {
-            case Instructions.INST_SET_HEALTH:
-                setHealth(0, 100);
-                break;
-            case Instructions.INST_SET_WISDOM:
-                setWisdom(0, 100);
-                break;
-            case Instructions.INST_SET_AGILITY:
-                setAgility(0, 100);
-                break;
-            case Instructions.INST_PLAY_SOUND:
-                playSound(0);
-                break;
-            case Instructions.INST_SPAWN_PARTICLES:
-                spawnParticles(0);
-                break;
+            instruction = (Instructions)bytecode[i];
+
+            switch (instruction)
+            {
+                case Instructions.INST_SET_HEALTH:
+                    int hPamount = PopOffStack();
+                    int hPwizard = PopOffStack();
+                    setHealth(hPwizard, hPamount);
+                    print($"{player[hPwizard].name}'s health is affected by {hPamount}!");
+                    break;
+
+                case Instructions.INST_SET_WISDOM:
+                    int wPamount = PopOffStack();
+                    int wPwizard = PopOffStack();
+                    setWisdom(wPwizard, wPamount);
+                    print($"{player[wPwizard].name}'s health is affected by {wPamount}!");
+                    break;
+
+                case Instructions.INST_SET_AGILITY:
+                    int aPamount = PopOffStack();
+                    int aPwizard = PopOffStack();
+                    setAgility(aPwizard, aPamount);
+                    print($"{player[aPwizard].name}'s health is affected by {aPamount}!");
+                    break;
+
+                case Instructions.INST_PLAY_SOUND:
+                    int soundID = PopOffStack();
+                    playSound(soundID);
+                    print($"{audioClips[soundID]} sound playing");
+                    break;
+
+                case Instructions.INST_SPAWN_PARTICLES:
+                    int particleType = PopOffStack();
+                    int targetWizard = PopOffStack();
+                    spawnParticles(targetWizard, particleType);
+                    print($"{particleEffects[particleType]} spawned at {player[targetWizard]}!");
+                    break;
+
+                case Instructions.INST_LITERAL:
+                    value = bytecode[++i];
+                    PushOnStack(value);
+                    print($"Added {value} on the stack");
+                    break;
+
+                default:
+                    break;
+            }
+        }
+    }
+
+    void PushOnStack(int value)
+    {
+        valueStack.Push(value);
+    }
+
+    int PopOffStack()
+    {
+        if (valueStack.Count > 0)
+            return (int)valueStack.Pop();
+        else
+        {
+            print("Spell stack empty.");
+            return 0;
         }
     }
 
@@ -62,17 +112,19 @@ public class VM : MonoBehaviour
             AudioSource.PlayClipAtPoint(audioClips[soundId], Vector3.zero);
     }
 
-    void spawnParticles(int particleType)
+    void spawnParticles(int wizard, int particleType)
     {
         if (particleEffects.Length > 0)
-            Instantiate(particleEffects[particleType], player[0].transform);
+            Instantiate(particleEffects[particleType], player[wizard].transform);
     }
 }
+
 public enum Instructions
 {
-    INST_SET_HEALTH = 0x00,
-    INST_SET_WISDOM = 0x01,
-    INST_SET_AGILITY = 0x02,
-    INST_PLAY_SOUND = 0x03,
-    INST_SPAWN_PARTICLES = 0x04
+    INST_SET_HEALTH = 100,
+    INST_SET_WISDOM = 101,
+    INST_SET_AGILITY = 102,
+    INST_PLAY_SOUND = 103,
+    INST_SPAWN_PARTICLES = 104,
+    INST_LITERAL = 105
 }

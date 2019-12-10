@@ -471,6 +471,7 @@ GameObject:
   - component: {fileID: 986823739}
   - component: {fileID: 986823738}
   - component: {fileID: 986823737}
+  - component: {fileID: 986823740}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -496,7 +497,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 50}
+  m_SizeDelta: {x: 150, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &986823737
 MonoBehaviour:
@@ -541,8 +542,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1283200329}
-        m_MethodName: SortInstructions
+      - m_Target: {fileID: 986823740}
+        m_MethodName: CastSpell
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -588,6 +589,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 986823735}
   m_CullTransparentMesh: 0
+--- !u!114 &986823740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986823735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b68c11c84070b345b4c79f14bfa053f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  virtualMachine: {fileID: 1283200329}
+  spellCodes: 690000000000000069000000ceffffff64000000
 --- !u!1 &1283200328
 GameObject:
   m_ObjectHideFlags: 0
@@ -626,7 +641,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7bef9f4adc456b646992205833ce77ff, type: 3}
   particleEffects:
   - {fileID: 6563114100064226456, guid: a2a901b15f75b5f4b99822ffa8278f0f, type: 3}
-  instructions: 0
+  instruction: 0
 --- !u!4 &1283200330
 Transform:
   m_ObjectHideFlags: 0
@@ -655,7 +670,7 @@ GameObject:
   - component: {fileID: 1530759170}
   - component: {fileID: 1530759169}
   m_Layer: 0
-  m_Name: Player 1
+  m_Name: Red Wizard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -818,7 +833,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: FIGHT!
+  m_Text: Cast Spell!
 --- !u!222 &1553371225
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -841,7 +856,7 @@ GameObject:
   - component: {fileID: 1735622454}
   - component: {fileID: 1735622453}
   m_Layer: 0
-  m_Name: Player 2
+  m_Name: Green Wizard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
