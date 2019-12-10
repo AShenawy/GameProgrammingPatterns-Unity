@@ -1043,6 +1043,7 @@ GameObject:
   - component: {fileID: 1165842262}
   - component: {fileID: 1165842261}
   - component: {fileID: 1165842260}
+  - component: {fileID: 1165842263}
   m_Layer: 5
   m_Name: Div
   m_TagString: Untagged
@@ -1113,8 +1114,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
+      - m_Target: {fileID: 1165842263}
+        m_MethodName: DoMath
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1160,6 +1161,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1165842258}
   m_CullTransparentMesh: 0
+--- !u!114 &1165842263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165842258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57bcef528e9a34248b6f240a1b4ae000, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  calculator: {fileID: 622882447}
 --- !u!1 &1487713836
 GameObject:
   m_ObjectHideFlags: 0
@@ -1293,6 +1307,7 @@ GameObject:
   - component: {fileID: 1567686539}
   - component: {fileID: 1567686538}
   - component: {fileID: 1567686537}
+  - component: {fileID: 1567686540}
   m_Layer: 5
   m_Name: Sub
   m_TagString: Untagged
@@ -1363,8 +1378,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
+      - m_Target: {fileID: 1567686540}
+        m_MethodName: DoMath
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1410,6 +1425,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1567686535}
   m_CullTransparentMesh: 0
+--- !u!114 &1567686540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567686535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfce91a99c0e5714e8491d0357ea99f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  calculator: {fileID: 622882447}
 --- !u!1 &1569675572
 GameObject:
   m_ObjectHideFlags: 0
@@ -1499,6 +1527,7 @@ GameObject:
   - component: {fileID: 1829758858}
   - component: {fileID: 1829758857}
   - component: {fileID: 1829758856}
+  - component: {fileID: 1829758859}
   m_Layer: 5
   m_Name: Mul
   m_TagString: Untagged
@@ -1569,8 +1598,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
+      - m_Target: {fileID: 1829758859}
+        m_MethodName: DoMath
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1616,6 +1645,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1829758854}
   m_CullTransparentMesh: 0
+--- !u!114 &1829758859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829758854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e52ba59a1501cc4c8129d62cbc23cf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  calculator: {fileID: 622882447}
 --- !u!1 &1874306443
 GameObject:
   m_ObjectHideFlags: 0
