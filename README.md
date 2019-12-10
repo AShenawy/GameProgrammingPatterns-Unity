@@ -23,8 +23,8 @@ Bytecode is a Behavioural Pattern, the objective of patterns in this group is to
 This is especially useful if you want your users to modify the game because bytecode can't accidentally reach strange parts of the game engine and it controls how much memory it uses.
 When to use Bytecode pattern in your game
 It should be used when your game has a lot of different behaviours and the language you are programming in is:
-Too low-level, making it tedious or error-prone to program in.
-It has slow compile times
+ - Too low-level, making it tedious or error-prone to program in.
+ - It has slow compile times
  
 
 
