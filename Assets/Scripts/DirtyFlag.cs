@@ -30,7 +30,7 @@ public class DirtyFlag : MonoBehaviour
 
     private void clearTheFlag()
     {
-        childTransform.transform.parent = parentObjectTransform;
+        childTransform.position = parentObjectTransform.position;
         Debug.Log("Child position has been updated");
         isChanged = false;
     }
